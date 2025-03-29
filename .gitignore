@@ -17,6 +17,5 @@ build/
 /dsd
 /dsd.exe
 build.ninja
-.ninja_log*
-.ninja_lock
+.ninja_*
 /wibo
