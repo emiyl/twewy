@@ -1777,7 +1777,7 @@ from:0x02016800 kind:arm_call to:0x0201680c module:main
 from:0x02016804 kind:arm_call to:0x02016900 module:main
 from:0x02016814 kind:arm_call to:0x020168e8 module:main
 from:0x02016838 kind:arm_call to:0x0201654c module:main
-from:0x0201685c kind:load to:0x0206c39c module:main
+from:0x0201685c kind:load to:0x0206c398 add:0x4 module:main
 from:0x02016860 kind:load to:0x0206c3b0 module:main
 from:0x02016864 kind:load to:0x0206c398 module:main
 from:0x0201686c kind:arm_call to:0x020168f4 module:main

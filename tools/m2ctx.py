@@ -20,8 +20,8 @@ args = parser.parse_args()
 CXX_FLAGS = [
     '-nostdinc',
     '-Iinclude',
-    '-Ilibs/nitro/include',
-    '-Ilibs/c/include',
+    '-Ilibs/NitroSDK/include',
+    '-Ilibs/CriWare/include',
     # '-Ilibs/nds/include'
 ]
 

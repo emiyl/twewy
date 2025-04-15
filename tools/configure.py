@@ -7,6 +7,11 @@ import sys
 import ninja_syntax
 from get_platform import get_platform
 
+# Game Versions
+VERSIONS = [
+    "usa",
+]
+DEFAULT_VERSION = VERSIONS.index("usa")
 
 DEFAULT_WIBO_PATH = "./wibo"
 
@@ -30,7 +35,13 @@ parser.add_argument("--no-extract", action="store_true", help="Skip extraction s
 parser.add_argument(
     "--dsd", type=Path, required=False, help="Path to pre-installed dsd executable"
 )
-parser.add_argument("version", help="Game version")
+parser.add_argument(
+    "-v",
+    "--version",
+    help="Game version",
+    choices=VERSIONS,
+    default=VERSIONS[DEFAULT_VERSION],
+)
 args = parser.parse_args()
 
 
@@ -53,7 +64,7 @@ CC_FLAGS = " ".join(
         "-gccext,on",  # Enable GCC extensions
         "-fp soft",  # Compute float operations in software
         "-inline noauto",  # Inline only functions marked with 'inline'
-        "-lang=c++",  # Set language to C++
+        "-lang=c",  # Set language to C++
         "-Cpp_exceptions off",  # Disable C++ exceptions
         "-RTTI off",  # Disable runtime type information
         "-interworking",  # Enable ARM/Thumb interworking
@@ -160,7 +171,7 @@ class Project:
         return extract_path / f"baserom_{GAME}_{self.game_version}.nds"
 
     def build_rom(self) -> str:
-        return f"{GAME}_{self.game_version}.nds"
+        return self.game_build / f"{GAME}_{self.game_version}.nds"
 
     def baserom_config(self) -> Path:
         return self.game_extract / "config.yaml"
@@ -302,6 +313,8 @@ def main():
         add_objdiff_builds(n, project)
         add_configure_build(n, project, configure_script, python_lib_dir)
 
+        n.default("report")
+
 
 def add_download_tool_builds(n: ninja_syntax.Writer):
     if args.dsd is None:
@@ -399,7 +412,7 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
     )
     n.newline()
 
-    rom_file = project.build_rom()
+    rom_file = str(project.build_rom())
     n.build(
         inputs=rom_config_file,
         implicit=DSD,
@@ -418,7 +431,9 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
     n.build(
         inputs=rom_file,
         rule="sha1",
-        variables={"sha1_file": str(Path(rom_file).with_suffix(".sha1"))},
+        variables={
+            "sha1_file": project.game_config / "build.sha1"
+            },
         outputs="sha1",
     )
     n.newline()
@@ -529,7 +544,7 @@ def add_check_builds(n: ninja_syntax.Writer, project: Project):
     n.newline()
 
     n.build(
-        inputs=["check_modules", "check_symbols"],
+        inputs=["check_modules", "check_symbols", "sha1"],
         rule="phony",
         outputs="check",
     )
@@ -557,7 +572,7 @@ def add_objdiff_builds(n: ninja_syntax.Writer, project: Project):
 
     n.build(
         inputs=["objdiff.json"],
-        implicit=[OBJDIFF] + project.source_object_files(),
+        implicit=[OBJDIFF, "arm9", "check"] + project.source_object_files(),
         rule="objdiff_report",
         outputs=str(project.objdiff_report()),
     )
@@ -571,14 +586,14 @@ def add_objdiff_builds(n: ninja_syntax.Writer, project: Project):
     n.newline()
 
 
-def add_configure_build(n: ninja_syntax.Writer, project: Project, configure_script: Path, python_lib_dir):
+def add_configure_build(n: ninja_syntax.Writer, project: Project, configure_script: Path, python_lib_dir: Path):
     ###
-    # Regenerate on changes
+    # Regenerate on change
     ###
-    n.comment("Reconfigure on changes to config files")
+    n.comment("Regenerate on change")
     n.rule(
         name="configure",
-        command=f"$python {configure_script} $configure_args",
+        command=f"{PYTHON} {configure_script} $configure_args",
         generator=True,
         description=f"RUN {configure_script}",
     )
