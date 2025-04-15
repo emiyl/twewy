@@ -47,6 +47,6 @@ s8* cvFsGetDefDev(void) {
 void func_0201b884(void) {
     func_0201bfac();
     func_0201b640(func_0201b874, 0);
-    cvFsAddDev("MFS", func_0201d540,0);
-    cvFsAddDev("NITRO", func_0201bfa0,0);
+    cvFsAddDev("MFS", func_0201d540, 0);
+    cvFsAddDev("NITRO", func_0201bfa0, 0);
 }

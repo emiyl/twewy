@@ -4,7 +4,15 @@
     .data       start:0x020636a0 end:0x02066a20 kind:data align:32
     .bss        start:0x02066a20 end:0x020824a0 kind:bss align:32
 
-libs/CriWare/src/adxt.cpp:
+libs/CriWare/src/adxsjd.c:
+    .text       start:0x020148DC end:0x02015AAC
+
+libs/CriWare/src/adxstm.c:
+    .text       start:0x02015E10 end:0x020168F4
+    .data       start:0x02063A90 end:0x02063AE8
+    .bss        start:0x0206C398 end:0x0206C798
+
+libs/CriWare/src/adxt.c:
     .text       start:0x020168F4 end:0x02018CDC
     .data       start:0x02063AF0 end:0x02063F74
 
@@ -13,18 +21,20 @@ libs/CriWare/src/cvFs.c:
     .bss        start:0x020703E0 end:0x02070774
 
 libs/CriWare/src/acssvr.c:
-    .text       start:0x0201EF48 end:0x0201F18C
+    .text       start:0x0201EF48 end:0x0201f568
 
 libs/CriWare/src/acssnd.c:
-    .text       start:0x0201F568 end:0x020200A8
+    .text       start:0x0201F568 end:0x02020754
 
 libs/CriWare/src/acsfdr.c:
-    .text       start:0x02020754 end:0x02020A40
+    .text       start:0x02020754 end:0x02020F1C
 
-libs/CriWare/src/acssbadx.cpp:
+libs/CriWare/src/acssbadx.c:
+complete
     .text       start:0x02020F1C end:0x02021184
     .rodata     start:0x0205C094 end:0x0205C0D8
-    .data       start:0x02065844 end:0x020658B0
+    .data       start:0x02065844 end:0x020658EC
 
 libs/CriWare/src/acsvhl.c:
-    .text       start:0x02021184 end:0x020214D0
+    .text       start:0x02021184 end:0x02021534
+    .data       start:0x020658EC end:0x020659BC

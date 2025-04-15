@@ -64,7 +64,7 @@ CC_FLAGS = " ".join(
         "-gccext,on",  # Enable GCC extensions
         "-fp soft",  # Compute float operations in software
         "-inline noauto",  # Inline only functions marked with 'inline'
-        "-lang=c++",  # Set language to C++
+        "-lang=c",  # Set language to C++
         "-Cpp_exceptions off",  # Disable C++ exceptions
         "-RTTI off",  # Disable runtime type information
         "-interworking",  # Enable ARM/Thumb interworking

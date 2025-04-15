@@ -4,8 +4,10 @@
 #include "acsfdr.h"
 #include "types.h"
 
+typedef struct ACSSVR ACSSVR;
+
 typedef struct {
-    /* 0x00 */ s32     unk_00;
+    /* 0x00 */ ACSSVR* svr;
     /* 0x04 */ ACSFDR* unk_04;
     /* 0x08 */ ACSFDR  fdr;
     /* 0x4C */ s32     unk_4C;
@@ -17,5 +19,8 @@ typedef struct {
 } ACSVHL; // Size: 0x60
 
 void func_02021488(ACSVHL* vhl);
+void func_020214d0(ACSVHL* vhl, s8 param_2);
+s32  func_020214d8(ACSVHL* vhl);
+s32  func_02021504(ACSVHL* vhl);
 
 #endif // ACSVHL_H

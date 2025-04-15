@@ -564,11 +564,15 @@ func_02014664 kind:function(arm,size=0x148) addr:0x02014664
 func_020147ac kind:function(arm,size=0xdc) addr:0x020147ac
 func_02014888 kind:function(arm,size=0x14) addr:0x02014888
 func_0201489c kind:function(arm,size=0x40) addr:0x0201489c
-func_020148dc kind:function(arm,size=0x60) addr:0x020148dc
-func_0201493c kind:function(arm,size=0x58) addr:0x0201493c
-func_02014994 kind:function(arm,size=0x3c) addr:0x02014994
-func_020149d0 kind:function(arm,size=0x110) addr:0x020149d0
-func_02014ae0 kind:function(arm,size=0x40) addr:0x02014ae0
+
+/////////////////////////////////////////////////////////////
+// libs/CriWare/src/adxsjd.c
+/////////////////////////////////////////////////////////////
+ADXSJD_Init kind:function(arm,size=0x60) addr:0x020148dc
+ADXSJD_Finish kind:function(arm,size=0x58) addr:0x0201493c
+ADXSJD_Clear kind:function(arm,size=0x3c) addr:0x02014994
+ADXSJD_Create kind:function(arm,size=0x110) addr:0x020149d0
+ADXSJD_Destroy kind:function(arm,size=0x40) addr:0x02014ae0
 func_02014b20 kind:function(arm,size=0x8) addr:0x02014b20
 func_02014b28 kind:function(arm,size=0x14) addr:0x02014b28
 func_02014b3c kind:function(arm,size=0x14) addr:0x02014b3c
@@ -610,6 +614,8 @@ func_02015a7c kind:function(arm,size=0x8) addr:0x02015a7c
 func_02015a84 kind:function(arm,size=0x10) addr:0x02015a84
 func_02015a94 kind:function(arm,size=0x10) addr:0x02015a94
 func_02015aa4 kind:function(arm,size=0x8) addr:0x02015aa4
+
+
 func_02015aac kind:function(arm,size=0x58) addr:0x02015aac
 func_02015b04 kind:function(arm,size=0x50) addr:0x02015b04
 func_02015b54 kind:function(arm,size=0xe4) addr:0x02015b54
@@ -619,13 +625,16 @@ func_02015d68 kind:function(arm,size=0x2c) addr:0x02015d68
 func_02015d94 kind:function(arm,size=0x30) addr:0x02015d94
 func_02015dc4 kind:function(arm,size=0x1c) addr:0x02015dc4
 func_02015de0 kind:function(arm,size=0x30) addr:0x02015de0
+
+/////////////////////////////////////////////////////////////
+// libs/CriWare/src/adxstm.c
+/////////////////////////////////////////////////////////////
 func_02015e10 kind:function(arm,size=0x4c) addr:0x02015e10
 func_02015e5c kind:function(arm,size=0x6c) addr:0x02015e5c
 func_02015ec8 kind:function(arm,size=0x1c) addr:0x02015ec8
 func_02015ee4 kind:function(arm,size=0x30) addr:0x02015ee4
 func_02015f14 kind:function(arm,size=0x1c) addr:0x02015f14
-func_02015f30 kind:function(arm,size=0x28) addr:0x02015f30
-func_02015f58 kind:function(arm,size=0x4) addr:0x02015f58
+func_02015f30 kind:function(arm,size=0x2C) addr:0x02015f30
 func_02015f5c kind:function(arm,size=0x24) addr:0x02015f5c
 func_02015f80 kind:function(arm,size=0x8) addr:0x02015f80
 func_02015f88 kind:function(arm,size=0x2c) addr:0x02015f88
@@ -636,8 +645,7 @@ func_0201602c kind:function(arm,size=0x2c) addr:0x0201602c
 func_02016058 kind:function(arm,size=0x1c) addr:0x02016058
 func_02016074 kind:function(arm,size=0x48) addr:0x02016074
 func_020160bc kind:function(arm,size=0x1c) addr:0x020160bc
-func_020160d8 kind:function(arm,size=0x28) addr:0x020160d8
-func_02016100 kind:function(arm,size=0x4) addr:0x02016100
+func_020160d8 kind:function(arm,size=0x2C) addr:0x020160d8
 func_02016104 kind:function(arm,size=0x2c) addr:0x02016104
 func_02016130 kind:function(arm,size=0xc) addr:0x02016130
 func_0201613c kind:function(arm,size=0x24) addr:0x0201613c
@@ -659,62 +667,62 @@ func_020168e8 kind:function(arm,size=0xc) addr:0x020168e8
 /////////////////////////////////////////////////////////////
 // libs/CriWare/src/adxt.c
 /////////////////////////////////////////////////////////////
-_Z13func_020168f4v kind:function(arm,size=0xc) addr:0x020168f4
-_Z13func_02016900v kind:function(arm,size=0xc) addr:0x02016900
-_ZN4ADXT13func_0201690cEii kind:function(arm,size=0x34) addr:0x0201690c
-_ZN4ADXT11adxt_CreateEii kind:function(arm,size=0x324) addr:0x02016940
-_ZN4ADXT13func_02016c64Ei kind:function(arm,size=0x2c) addr:0x02016c64
-_ZN4ADXT13func_02016c90Ei kind:function(arm,size=0x20) addr:0x02016c90
-_Z13func_02016cb0v kind:function(arm,size=0x20) addr:0x02016cb0
-_ZN4ADXT7DestroyEv kind:function(arm,size=0x1c) addr:0x02016cd0
-_ZN4ADXT12adxt_DestroyEv kind:function(arm,size=0x18c) addr:0x02016cec
-_ZN4ADXT13func_02016e78Ev kind:function(arm,size=0x14) addr:0x02016e78
-_ZN4ADXT13func_02016e8cEv kind:function(arm,size=0x38) addr:0x02016e8c
+func_020168f4 kind:function(arm,size=0xc) addr:0x020168f4
+func_02016900 kind:function(arm,size=0xc) addr:0x02016900
+ADXT_Create kind:function(arm,size=0x34) addr:0x0201690c
+adxt_Create kind:function(arm,size=0x324) addr:0x02016940 local
+func_02016c64 kind:function(arm,size=0x2c) addr:0x02016c64
+func_02016c90 kind:function(arm,size=0x20) addr:0x02016c90
+func_02016cb0 kind:function(arm,size=0x20) addr:0x02016cb0
+ADXT_Destroy kind:function(arm,size=0x1c) addr:0x02016cd0
+adxt_Destroy kind:function(arm,size=0x18c) addr:0x02016cec local
+ADXT_DestroyAll kind:function(arm,size=0x14) addr:0x02016e78
+adxt_DestroyAll kind:function(arm,size=0x38) addr:0x02016e8c
 func_02016ec4 kind:function(arm,size=0xc0) addr:0x02016ec4
 func_02016f84 kind:function(arm,size=0xbc) addr:0x02016f84
 func_02017040 kind:function(arm,size=0x80) addr:0x02017040
-_ZN4ADXT4StopEv kind:function(arm,size=0x1c) addr:0x020170c0
-adxt_Stop kind:function(arm,size=0x64) addr:0x020170dc
-func_02017140 kind:function(arm,size=0x24) addr:0x02017140
-adxt_GetStat kind:function(arm,size=0x24) addr:0x02017164
+ADXT_Stop kind:function(arm,size=0x1c) addr:0x020170c0
+adxt_Stop kind:function(arm,size=0x64) addr:0x020170dc local
+ADXT_GetStat kind:function(arm,size=0x24) addr:0x02017140
+adxt_GetStat kind:function(arm,size=0x24) addr:0x02017164 local
 func_02017188 kind:function(arm,size=0xa0) addr:0x02017188
 adxt_GetTime kind:function(arm,size=0x27c) addr:0x02017228
 func_020174a4 kind:function(arm,size=0x24) addr:0x020174a4
 func_020174c8 kind:function(arm,size=0x50) addr:0x020174c8
-func_02017518 kind:function(arm,size=0x24) addr:0x02017518
+ADXT_GetNumChan kind:function(arm,size=0x24) addr:0x02017518
 adxt_GetNumChan kind:function(arm,size=0x3c) addr:0x0201753c
-func_02017578 kind:function(arm,size=0x2c) addr:0x02017578
-adxt_SetOutPan kind:function(arm,size=0x120) addr:0x020175a4
-_ZN4ADXT9SetOutVolEs kind:function(arm,size=0x24) addr:0x020176c4
-adxt_SetOutVol kind:function(arm,size=0x50) addr:0x020176e8
-_ZN4ADXT9GetOutVolEv kind:function(arm,size=0x24) addr:0x02017738
-_ZN4ADXT14adxt_GetOutVolEv kind:function(arm,size=0x24) addr:0x0201775c
-func_02017780 kind:function(arm,size=0x8) addr:0x02017780
-_ZN4ADXT13func_02017788Ev kind:function(arm,size=0x1c) addr:0x02017788
+ADXT_SetOutPan kind:function(arm,size=0x2c) addr:0x02017578
+adxt_SetOutPan kind:function(arm,size=0x120) addr:0x020175a4 local
+ADXT_SetOutVol kind:function(arm,size=0x24) addr:0x020176c4
+adxt_SetOutVol kind:function(arm,size=0x50) addr:0x020176e8 local
+ADXT_GetOutVol kind:function(arm,size=0x24) addr:0x02017738
+adxt_GetOutVol kind:function(arm,size=0x24) addr:0x0201775c
+ADXT_SetExtraInfo kind:function(arm,size=0x8) addr:0x02017780
+func_02017788 kind:function(arm,size=0x1c) addr:0x02017788
 func_020177a4 kind:function(arm,size=0x14) addr:0x020177a4
 func_020177b8 kind:function(arm,size=0x14) addr:0x020177b8
 func_020177cc kind:function(arm,size=0xe8) addr:0x020177cc
-func_020178b4 kind:function(arm,size=0x24) addr:0x020178b4
+ADXT_SetLpFlg kind:function(arm,size=0x24) addr:0x020178b4
 adxt_SetLpFlg kind:function(arm,size=0xdc) addr:0x020178d8
-func_020179b4 kind:function(arm,size=0x24) addr:0x020179b4
+ADXT_Pause kind:function(arm,size=0x24) addr:0x020179b4
 adxt_Pause kind:function(arm,size=0x100) addr:0x020179d8
-_ZN4ADXT12GetStatPauseEv kind:function(arm,size=0x24) addr:0x02017ad8
-_ZN4ADXT17adxt_GetStatPauseEv kind:function(arm,size=0x24) addr:0x02017afc
+ADXT_GetStatPause kind:function(arm,size=0x24) addr:0x02017ad8
+adxt_GetStatPause kind:function(arm,size=0x24) addr:0x02017afc
 func_02017b20 kind:function(arm,size=0x2c) addr:0x02017b20
 func_02017b4c kind:function(arm,size=0x2c) addr:0x02017b4c
 func_02017b78 kind:function(arm,size=0x4) addr:0x02017b78
 func_02017b7c kind:function(arm,size=0x4) addr:0x02017b7c
 func_02017b80 kind:function(arm,size=0x24) addr:0x02017b80
 func_02017ba4 kind:function(arm,size=0x1c) addr:0x02017ba4
-_ZN4ADXT8StartAfsEii kind:function(arm,size=0x2c) addr:0x02017bc0
+ADXT_StartAfs kind:function(arm,size=0x2c) addr:0x02017bc0
 adxt_StartAfs kind:function(arm,size=0xec) addr:0x02017bec
-func_02017cd8 kind:function(arm,size=0x34) addr:0x02017cd8
+ADXT_StartFnameRange kind:function(arm,size=0x34) addr:0x02017cd8
 adxt_StartFnameRange kind:function(arm,size=0x74) addr:0x02017d0c
-_ZN4ADXT13func_02017d80Ei kind:function(arm,size=0x24) addr:0x02017d80
+func_02017d80 kind:function(arm,size=0x24) addr:0x02017d80
 func_02017da4 kind:function(arm,size=0x18) addr:0x02017da4
-_ZN4ADXT9StartMem2Eii kind:function(arm,size=0x2c) addr:0x02017dbc
+ADXT_StartMem2 kind:function(arm,size=0x2c) addr:0x02017dbc
 adxt_StartMem2 kind:function(arm,size=0x84) addr:0x02017de8
-_ZN4ADXT11StartMemIdxEii kind:function(arm,size=0x2c) addr:0x02017e6c
+ADXT_StartMemIdx kind:function(arm,size=0x2c) addr:0x02017e6c
 adxt_StartMemIdx kind:function(arm,size=0xe8) addr:0x02017e98
 func_02017f80 kind:function(arm,size=0x84) addr:0x02017f80
 func_02018004 kind:function(arm,size=0x164) addr:0x02018004
@@ -729,7 +737,7 @@ func_02018b74 kind:function(arm,size=0x4) addr:0x02018b74
 func_02018b78 kind:function(arm,size=0x5c) addr:0x02018b78
 func_02018bd4 kind:function(arm,size=0x6c) addr:0x02018bd4
 func_02018c40 kind:function(arm,size=0x1c) addr:0x02018c40
-_ZN4ADXT13adxt_ExecHndlEv kind:function(arm,size=0x80) addr:0x02018c5c
+adxt_ExecHndl kind:function(arm,size=0x80) addr:0x02018c5c
 
 
 func_02018cdc kind:function(arm,size=0x38) addr:0x02018cdc
@@ -881,6 +889,8 @@ func_0201b7d8 kind:function(arm,size=0x38) addr:0x0201b7d8
 func_0201b810 kind:function(arm,size=0x64) addr:0x0201b810
 func_0201b874 kind:function(arm,size=0x10) addr:0x0201b874
 func_0201b884 kind:function(arm,size=0x58) addr:0x0201b884
+
+
 func_0201b8dc kind:function(arm,size=0x54) addr:0x0201b8dc
 func_0201b930 kind:function(arm,size=0xc) addr:0x0201b930
 func_0201b93c kind:function(arm,size=0x4c) addr:0x0201b93c
@@ -903,6 +913,8 @@ func_0201be7c kind:function(arm,size=0x24) addr:0x0201be7c
 func_0201bea0 kind:function(arm,size=0xc) addr:0x0201bea0
 func_0201beac kind:function(arm,size=0xc) addr:0x0201beac
 func_0201beb8 kind:function(arm,size=0xc) addr:0x0201beb8
+
+
 func_0201bec4 kind:function(arm,size=0xc) addr:0x0201bec4
 func_0201bed0 kind:function(arm,size=0x18) addr:0x0201bed0
 func_0201bee8 kind:function(arm,size=0xc) addr:0x0201bee8
@@ -1149,26 +1161,26 @@ func_02020ef0 kind:function(arm,size=0x2c) addr:0x02020ef0
 /////////////////////////////////////////////////////////////
 // libs/CriWare/src/acssbadx.c
 /////////////////////////////////////////////////////////////
-_ZN8ACSSBADX15ACSSBADX_CreateEt kind:function(arm,size=0x48) addr:0x02020f1c
-_ZN8ACSSBADX13func_02020f64Ev kind:function(arm,size=0x14) addr:0x02020f64
-_ZN8ACSSBADX19ACSSBADX_CreateHndlEPlll kind:function(arm,size=0x68) addr:0x02020f78
-_ZN8ACSSBADX11DestroyAdxtEv kind:function(arm,size=0x24) addr:0x02020fe0
-_ZN8ACSSBADX13func_02021004El kind:function(arm,size=0x10) addr:0x02021004
-_ZN8ACSSBADX13func_02021014Ei kind:function(arm,size=0x10) addr:0x02021014
-_ZN8ACSSBADX8StartAfsEii kind:function(arm,size=0x10) addr:0x02021024
-_ZN8ACSSBADX9StartMem2Eii kind:function(arm,size=0x10) addr:0x02021034
-_ZN8ACSSBADX11StartMemIdxEii kind:function(arm,size=0x10) addr:0x02021044
-_ZN8ACSSBADX4StopEv kind:function(arm,size=0x10) addr:0x02021054
-_ZN8ACSSBADX5PauseEv kind:function(arm,size=0x10) addr:0x02021064
-_ZN8ACSSBADX12GetStatPauseEv kind:function(arm,size=0x10) addr:0x02021074
-_ZN8ACSSBADX13func_02021084Ev kind:function(arm,size=0x64) addr:0x02021084
-_ZN8ACSSBADX9SetOutVolEs kind:function(arm,size=0x20) addr:0x020210e8
-_ZN8ACSSBADX9GetOutVolEv kind:function(arm,size=0x10) addr:0x02021108
-_ZN8ACSSBADX13func_02021118Els kind:function(arm,size=0x1c) addr:0x02021118
-_ZN8ACSSBADX13func_02021134El kind:function(arm,size=0x1c) addr:0x02021134
-_ZN8ACSSBADX8SetLpFlgEl kind:function(arm,size=0x10) addr:0x02021150
-_ZN8ACSSBADX7GetAdxtEv kind:function(arm,size=0x8) addr:0x02021160
-_ZN8ACSSBADXC2Ev kind:function(arm,size=0x1c) addr:0x02021168
+ACSSBADX_Create kind:function(arm,size=0x48) addr:0x02020f1c
+func_02020f64 kind:function(arm,size=0x14) addr:0x02020f64
+ACSSBADX_CreateHndl kind:function(arm,size=0x68) addr:0x02020f78
+ACSSBADX_DestroyAdxt kind:function(arm,size=0x24) addr:0x02020fe0
+func_02021004 kind:function(arm,size=0x10) addr:0x02021004
+ACSSBADX_StartFnameRange kind:function(arm,size=0x10) addr:0x02021014
+ACSSBADX_StartAfs kind:function(arm,size=0x10) addr:0x02021024
+ACSSBADX_StartMem2 kind:function(arm,size=0x10) addr:0x02021034
+ACSSBADX_StartMemIdx kind:function(arm,size=0x10) addr:0x02021044
+ACSSBADX_Stop kind:function(arm,size=0x10) addr:0x02021054
+ACSSBADX_Pause kind:function(arm,size=0x10) addr:0x02021064
+ACSSBADX_GetStatPause kind:function(arm,size=0x10) addr:0x02021074
+ACSSBADX_GetStat kind:function(arm,size=0x64) addr:0x02021084
+ACSSBADX_SetOutVol kind:function(arm,size=0x20) addr:0x020210e8
+ACSSBADX_GetOutVol kind:function(arm,size=0x10) addr:0x02021108
+ACSSBADX_SetOutVol2 kind:function(arm,size=0x1c) addr:0x02021118
+ACSSBADX_GetOutVol2 kind:function(arm,size=0x1c) addr:0x02021134
+ACSSBADX_SetLpFlg kind:function(arm,size=0x10) addr:0x02021150
+ACSSBADX_GetAdxt kind:function(arm,size=0x8) addr:0x02021160
+func_02021168 kind:function(arm,size=0x1c) addr:0x02021168
 
 /////////////////////////////////////////////////////////////
 // libs/CriWare/src/acsvhl.c
@@ -1176,8 +1188,6 @@ _ZN8ACSSBADXC2Ev kind:function(arm,size=0x1c) addr:0x02021168
 ACSVHL_Create kind:function(arm,size=0x48) addr:0x02021184
 func_020211cc kind:function(arm,size=0x14) addr:0x020211cc
 ACSVHL_Init kind:function(arm,size=0x80) addr:0x020211e0
-
-
 func_02021260 kind:function(arm,size=0x24) addr:0x02021260
 func_02021284 kind:function(arm,size=0xc) addr:0x02021284
 func_02021290 kind:function(arm,size=0x8) addr:0x02021290
@@ -1189,6 +1199,8 @@ func_02021488 kind:function(arm,size=0x48) addr:0x02021488
 func_020214d0 kind:function(arm,size=0x8) addr:0x020214d0
 func_020214d8 kind:function(arm,size=0x2c) addr:0x020214d8
 func_02021504 kind:function(arm,size=0x30) addr:0x02021504
+
+
 func_02021534 kind:function(arm,size=0x80) addr:0x02021534
 func_020215b4 kind:function(arm,size=0x4) addr:0x020215b4
 func_020215b8 kind:function(arm,size=0x4) addr:0x020215b8
@@ -2825,7 +2837,7 @@ data_0205c090 kind:data(any) addr:0x0205c090
 /////////////////////////////////////////////////////////////
 // libs/CriWare/src/acssbadx.c
 /////////////////////////////////////////////////////////////
-_ZTV8ACSSBADX kind:data(any) addr:0x0205c094
+ACSSBADX_VTable kind:data(any) addr:0x0205c094
 
 
 data_0205c0d8 kind:data(any) addr:0x0205c0d8
@@ -2960,8 +2972,12 @@ data_02063a0c kind:data(any) addr:0x02063a0c
 data_02063a30 kind:data(any) addr:0x02063a30
 data_02063a54 kind:data(any) addr:0x02063a54
 data_02063a84 kind:data(any) addr:0x02063a84
-data_02063a90 kind:data(any) addr:0x02063a90
-data_02063abc kind:data(any) addr:0x02063abc
+
+
+@306 kind:data(any) addr:0x02063a90
+@307 kind:data(any) addr:0x02063abc
+
+
 data_02063ae8 kind:data(any) addr:0x02063ae8
 data_02063af0 kind:data(any) addr:0x02063af0
 data_02063b18 kind:data(any) addr:0x02063b18
@@ -3205,15 +3221,19 @@ data_02065810 kind:data(any) addr:0x02065810
 /////////////////////////////////////////////////////////////
 // libs/CriWare/src/acssbadx.c
 /////////////////////////////////////////////////////////////
-@84 kind:data(any) addr:0x02065844 local
-@85 kind:data(any) addr:0x02065878 local
+@136 kind:data(any) addr:0x02065844 local
+@137 kind:data(any) addr:0x02065878 local
+@162 kind:data(any) addr:0x020658b0 local
+
+/////////////////////////////////////////////////////////////
+// libs/CriWare/src/acsvhl.c
+/////////////////////////////////////////////////////////////
+@25 kind:data(any) addr:0x020658ec local
+@26 kind:data(any) addr:0x02065920 local
+@48 kind:data(any) addr:0x02065954 local
+@49 kind:data(any) addr:0x02065984 local
 
 
-data_020658b0 kind:data(any) addr:0x020658b0
-data_020658ec kind:data(any) addr:0x020658ec
-data_02065920 kind:data(any) addr:0x02065920
-data_02065954 kind:data(any) addr:0x02065954
-data_02065984 kind:data(any) addr:0x02065984
 data_020659bc kind:data(any) addr:0x020659bc
 data_020659c4 kind:data(any) addr:0x020659c4
 data_020659c8 kind:data(any) addr:0x020659c8
@@ -3561,9 +3581,14 @@ data_0206bd94 kind:bss addr:0x0206bd94
 data_0206c0a4 kind:bss addr:0x0206c0a4
 data_0206c0b4 kind:bss addr:0x0206c0b4
 data_0206c0c8 kind:bss addr:0x0206c0c8
+
+/////////////////////////////////////////////////////////////
+// libs/CriWare/src/adxstm.c
+/////////////////////////////////////////////////////////////
 data_0206c398 kind:bss addr:0x0206c398
-data_0206c39c kind:bss addr:0x0206c39c
 data_0206c3b0 kind:bss addr:0x0206c3b0
+
+
 data_0206c798 kind:bss addr:0x0206c798
 data_0206c7e8 kind:bss addr:0x0206c7e8
 data_0206c7ec kind:bss addr:0x0206c7ec
