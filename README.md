@@ -1,6 +1,6 @@
-# The World Ends With You (Nintendo DS) - Reverse Engineered Codebase
+# The World Ends With You (Nintendo DS)
 
-This repository contains a reverse-engineered codebase for *The World Ends With You* (TWEWY) for the Nintendo DS. The goal of this project is to study and understand the game's code and mechanics. No "ports" or modifications are planned or supported in any form by this repository, and such use cases will **never** be supported or considered.
+This repository contains a reverse-engineered codebase for *The World Ends With You* (TWEWY) for the Nintendo DS. The goal of this project is to study and understand the game's code and mechanics. All code is produced by individual contributors without the use of assets or files produced by their original creators. **No assets are included. This repository CANNOT build a functional ROM without the user supplying a legitimately obtained copy of the game.** No "ports" or modifications are planned or supported in any form by this repository, and such use cases will **never** be supported or considered.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ This repository contains a reverse-engineered codebase for *The World Ends With 
 
 1. **Obtain the Original Game**: Ensure you have a legitimate copy of *The World Ends With You* for the Nintendo DS. The specific supported cartridges can be found in the [extract](extract/README.md) directory. Instructions for how to extract a ROM file from the cartridge are not included in this repository.
 2. **Extract Assets**: Place the extracted ROM file into the `extract` directory and rename it according to the expected title as listed within that directory.
-3. **Build the Project**: Run `ninja`. When first performed, additionally required executables will be downloaded, as listed in the [tools](tools/download_tool.py) directory. This includes dsd, wibo, and the compilers used to build a matching executable.
+3. **Build the Project**: Run `ninja`. When first performed, additionally required executables will be downloaded, as listed in the [tools](tools/download_tool.py) directory. This includes [dsd](https://github.com/AetiasHax/ds-decomp), [wibo](https://github.com/decompals/wibo), and the compilers used to build a matching executable.
 4. The final executable will be found in the [build](build) directory.
 
 ## Disclaimer
