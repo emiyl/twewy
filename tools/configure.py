@@ -48,7 +48,7 @@ args = parser.parse_args()
 # Config
 GAME = "twewy"
 
-DSD_VERSION = "v0.6.0"
+DSD_VERSION = "v0.7.0"
 WIBO_VERSION = "0.6.16"
 OBJDIFF_VERSION = "v2.7.1"
 MWCC_VERSION = "2.0/sp1p5"
@@ -597,10 +597,12 @@ def add_configure_build(n: ninja_syntax.Writer, project: Project, configure_scri
         generator=True,
         description=f"RUN {configure_script}",
     )
+    delink_file = str(project.arm9_delink_yaml())
     n.build(
         outputs="build.ninja",
         rule="configure",
         implicit=[
+            delink_file,
             str(configure_script),
             str(python_lib_dir / "ninja_syntax.py"),
         ] + project.dsd_configs(),

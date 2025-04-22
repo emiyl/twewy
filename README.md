@@ -17,8 +17,9 @@ This repository contains a reverse-engineered codebase for *The World Ends With 
 
 1. **Obtain the Original Game**: Ensure you have a legitimate copy of *The World Ends With You* for the Nintendo DS. The specific supported cartridges can be found in the [extract](extract/README.md) directory. Instructions for how to extract a ROM file from the cartridge are not included in this repository.
 2. **Extract Assets**: Place the extracted ROM file into the `extract` directory and rename it according to the expected title as listed within that directory.
-3. **Build the Project**: Run `ninja`. When first performed, additionally required executables will be downloaded, as listed in the [tools](tools/download_tool.py) directory. This includes [dsd](https://github.com/AetiasHax/ds-decomp), [wibo](https://github.com/decompals/wibo), and the compilers used to build a matching executable.
-4. The final executable will be found in the [build](build) directory.
+3. **Initialize the Build Configuration**: Run `python tools/configure.py`. This initializes the project for its first usage. After configuring once, the build command `ninja` will re-configure the project if needed.
+4. **Build the Project**: Run `ninja`. When first performed, additionally required executables will be downloaded, as listed in the [tools](tools/download_tool.py) directory. This includes [dsd](https://github.com/AetiasHax/ds-decomp), [wibo](https://github.com/decompals/wibo), and the compilers used to build a matching executable.
+5. The final executable will be found in the [build](build) directory.
 
 ## Disclaimer
 
