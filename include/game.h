@@ -41,7 +41,7 @@ typedef struct {
         /* 0x219E4 */ BOOL adxLoopEnabled;
         /* 0x219E8 */ s32  unk_219E8;
         /* 0x219EC */ BOOL noiseNoWaveLoad;
-    } st;
+    } sndTest;
 
 } GameState;
 

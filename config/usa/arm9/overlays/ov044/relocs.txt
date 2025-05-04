@@ -1005,6 +1005,8 @@ from:0x0208e9ac kind:arm_call to:0x0210aabc module:overlay(31)
 from:0x0208e9fc kind:load to:0x0208f3b0 module:overlay(44)
 from:0x0208ea30 kind:arm_call to:0x0200f68c module:main
 from:0x0208ea3c kind:load to:0x0208f3a4 module:overlay(44)
+from:0x0208ea40 kind:load to:0x020845cc module:overlay(44)
+from:0x0208ea44 kind:load to:0x02084760 module:overlay(44)
 from:0x0208ea48 kind:load to:0x02084984 module:overlay(44)
 from:0x0208eb10 kind:load to:0x0208f564 module:overlay(44)
 from:0x0208eb18 kind:load to:0x0208f5c4 module:overlay(44)

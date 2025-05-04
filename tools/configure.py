@@ -48,7 +48,7 @@ args = parser.parse_args()
 # Config
 GAME = "twewy"
 
-DSD_VERSION = "v0.7.0"
+DSD_VERSION = "v0.8.0"
 WIBO_VERSION = "0.6.16"
 OBJDIFF_VERSION = "v2.7.1"
 MWCC_VERSION = "2.0/sp1p5"
