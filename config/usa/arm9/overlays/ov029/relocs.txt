@@ -107,7 +107,7 @@ from:0x02082e1c kind:arm_call to:0x02027124 module:main
 from:0x02082e28 kind:load to:0x02066a24 module:main
 from:0x02082e2c kind:load to:0x0205e0f0 module:main
 from:0x02082e34 kind:load to:0x0205cb3c module:main
-from:0x02082e38 kind:load to:0x0205cb3e module:main
+from:0x02082e38 kind:load to:0x0205cb3c add:0x2 module:main
 from:0x02082e54 kind:arm_call to:0x02004618 module:main
 from:0x02082e68 kind:arm_call to:0x020049a8 module:main
 from:0x02082e70 kind:arm_call to:0x02007260 module:main

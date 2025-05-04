@@ -64,7 +64,7 @@ CC_FLAGS = " ".join(
         "-gccext,on",  # Enable GCC extensions
         "-fp soft",  # Compute float operations in software
         "-inline noauto",  # Inline only functions marked with 'inline'
-        "-lang=c",  # Set language to C++
+        "-lang=c99",  # Set language to C99
         "-Cpp_exceptions off",  # Disable C++ exceptions
         "-RTTI off",  # Disable runtime type information
         "-interworking",  # Enable ARM/Thumb interworking
@@ -73,12 +73,12 @@ CC_FLAGS = " ".join(
         "-gccinc",  # Interpret #include "..." and #include <...> equally
         "-nolink",  # Do not link
         "-msgstyle gcc",  # Use GCC-like messages (some IDEs will make file names clickable)
+        "-enc SJIS",  # Use Shift-JIS encoding
     ]
 )
 LD_FLAGS = " ".join(
     [
         "-proc arm946e",  # Target processor
-        # "-nostdlib",            # No C/C++ standard library
         "-interworking",  # Enable ARM/Thumb interworking
         "-m Entry",  # Set entry function
         "-map closure,unused",  # Generate map file
