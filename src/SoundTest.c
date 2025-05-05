@@ -1454,7 +1454,8 @@ void func_ov029_02082544(GameState* param_1) {
         if (iVar3 < 0) {
             iVar3 = -iVar3;
         }
-        pcVar1 = func_02006930("adx volume :-%d(-%d.%ddB)", param_1->sndTest.adxVolume, param_1->sndTest.adxVolume / 10, iVar3);
+        pcVar1 =
+            func_02006930("adx volume :-%d(-%d.%ddB)", param_1->sndTest.adxVolume, param_1->sndTest.adxVolume / 10, iVar3);
         func_02010b18(&param_1->unk_215A0, 8, 0x40, pcVar1);
     }
 
@@ -1485,9 +1486,9 @@ void func_ov029_02082824(GameState* state) {
 
 void func_ov029_02082838(GameState* state) {
     state->sndTest.adxIdx          = 0;
-    state->unk_219B4          = 0;
-    state->unk_219B8          = 0;
-    state->unk_219B0          = 0;
+    state->unk_219B4               = 0;
+    state->unk_219B8               = 0;
+    state->unk_219B0               = 0;
     state->sndTest.seqArc          = 0;
     state->sndTest.se              = 0;
     state->sndTest.seIdx           = 0;
@@ -1766,21 +1767,20 @@ void func_ov029_02082fdc(void) {
 
 // Nonmatching: If statement instructions incorrect
 void func_ov029_020832f4(void) {
-    if (-1 < data_02066a20 << 0x1f) {
-        return;
+    if (-((data_02066a20 << 0x1f)) != 0) {
+        func_02006380();
+        func_020019ac();
+        func_02039840(&data_0206770c, 0x400);
+        func_02037264(&data_0206770c, 0, 0x400);
+        func_02039840(&data_02068798, 0x400);
+        func_020372b8(&data_02068798, 0, 0x400);
+        func_02039840(&data_02066aec, 0x400);
+        func_02037108(&data_02066aec, 0, 0x200);
+        func_020371b4(&data_02066cec, 0, 0x200);
+        func_02039840(&data_02066eec, 0x400);
+        func_0203715c(&data_02066eec, 0, 0x200);
+        func_0203720c(&data_020670ec, 0, 0x200);
     }
-    func_02006380();
-    func_020019ac();
-    func_02039840(&data_0206770c, 0x400);
-    func_02037264(&data_0206770c, 0, 0x400);
-    func_02039840(&data_02068798, 0x400);
-    func_020372b8(&data_02068798, 0, 0x400);
-    func_02039840(&data_02066aec, 0x400);
-    func_02037108(&data_02066aec, 0, 0x200);
-    func_020371b4(&data_02066cec, 0, 0x200);
-    func_02039840(&data_02066eec, 0x400);
-    func_0203715c(&data_02066eec, 0, 0x200);
-    func_0203720c(&data_020670ec, 0, 0x200);
 }
 
 void func_ov029_020833c4(void) {
