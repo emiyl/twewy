@@ -2070,17 +2070,23 @@ func_0203968c kind:function(arm,size=0x3c) addr:0x0203968c
 func_020396c8 kind:function(arm,size=0x74) addr:0x020396c8
 func_0203973c kind:function(arm,size=0x24) addr:0x0203973c
 func_02039760 kind:function(arm,size=0x24) addr:0x02039760
-func_02039784 kind:function(arm,size=0x18) addr:0x02039784
-func_0203979c kind:function(arm,size=0xc) addr:0x0203979c
-func_020397a8 kind:function(arm,size=0x2c) addr:0x020397a8
-func_020397d4 kind:function(arm,size=0x34) addr:0x020397d4
-func_02039808 kind:function(arm,size=0x1c) addr:0x02039808
-func_02039824 kind:function(arm,size=0x1c) addr:0x02039824
-func_02039840 kind:function(arm,size=0x24) addr:0x02039840
-func_02039864 kind:function(arm,size=0xc) addr:0x02039864
-func_02039870 kind:function(arm,size=0x18) addr:0x02039870
-func_02039888 kind:function(arm,size=0xc) addr:0x02039888
-func_02039894 kind:function(arm,size=0x1c) addr:0x02039894
+
+/////////////////////////////////////////////////////////////
+// src/datacache.c
+/////////////////////////////////////////////////////////////
+DC_Enable kind:function(arm,size=0x18) addr:0x02039784
+DC_InvalidateAll kind:function(arm,size=0xc) addr:0x0203979c
+DC_CleanAll kind:function(arm,size=0x2c) addr:0x020397a8
+DC_PurgeAll kind:function(arm,size=0x34) addr:0x020397d4
+DC_InvalidateRange kind:function(arm,size=0x1c) addr:0x02039808
+DC_CleanRange kind:function(arm,size=0x1c) addr:0x02039824
+DC_PurgeRange kind:function(arm,size=0x24) addr:0x02039840
+DC_DrainWriteBuffer kind:function(arm,size=0xc) addr:0x02039864
+IC_Enable kind:function(arm,size=0x18) addr:0x02039870
+IC_InvalidateAll kind:function(arm,size=0xc) addr:0x02039888
+IC_InvalidateRange kind:function(arm,size=0x1c) addr:0x02039894
+
+
 func_020398b0 kind:function(arm,size=0x20) addr:0x020398b0
 func_020398d0 kind:function(arm,size=0x48) addr:0x020398d0
 func_02039918 kind:function(arm,size=0x104) addr:0x02039918
