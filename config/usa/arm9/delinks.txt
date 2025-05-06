@@ -6,6 +6,10 @@
     .data       start:0x020636a0 end:0x02066a20 kind:data align:32
     .bss        start:0x02066a20 end:0x020824a0 kind:bss align:32
 
+src/OverlayManager.c:
+    .text       start:0x02006F50 end:0x020073CC
+    .bss        start:0x0206AF24 end:0x0206B3B8
+
 libs/CriWare/src/adxsjd.c:
     .text       start:0x020148DC end:0x02015AAC
 

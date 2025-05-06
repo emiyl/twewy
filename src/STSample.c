@@ -1,6 +1,7 @@
+#include "OverlayManager.h"
+#include "cache.h"
 #include "common_data.h"
 #include "game.h"
-#include "cache.h"
 
 extern s32 OVERLAY_40_ID;
 
@@ -35,7 +36,7 @@ void func_ov041_02082730(GameState* state) {
     local_30.unk_1C = 0x20;
     local_30.unk_1E = 0x18;
     func_02025b68(&state->unk_21594, &local_30);
-    func_02010b18(&state->unk_215A0, 0, 0, "‚·‚ê‚¿‚ª‚¢ƒTƒ“ƒvƒ‹"); // "StreetPass Sample"
+    func_02010b18(&state->unk_215A0, 0, 0, "ï¿½ï¿½ï¿½ê‚¿ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½"); // "StreetPass Sample"
 }
 
 void func_ov041_020827b8(GameState* state) {
@@ -79,9 +80,9 @@ void func_ov041_020828f0(GameState* state) {
 }
 
 void func_ov041_0208290c(GameState* state) {
-    s32 idx;
-    u8* puVar2;
-    s32 auStack_10[2];
+    s32        idx;
+    u8*        puVar2;
+    OverlayTag tag;
 
     switch (data_02066a24.unk_02) {
         case 1:
@@ -110,7 +111,7 @@ void func_ov041_0208290c(GameState* state) {
             }
             puVar2++;
         }
-        func_02010b18(&state->unk_215A0, 8, (state->unk_22088 + 1) * 8, "ƒf[ƒ^ŽóM"); // "Data Received"
+        func_02010b18(&state->unk_215A0, 8, (state->unk_22088 + 1) * 8, "ï¿½fï¿½[ï¿½^ï¿½ï¿½M"); // "Data Received"
         state->unk_22088++;
     }
 
@@ -119,14 +120,14 @@ void func_ov041_0208290c(GameState* state) {
         return;
     }
     if ((data_02066a24.unk_02 & 4) != 0) {
-        func_02007174(auStack_10);
+        func_02007174(&tag);
     }
 }
 
 void func_ov041_02082a5c(GameState* param) {
     int        iVar1;
     GameState* state;
-    s32        sVar2;
+    GameState* sVar2;
 
     func_0200669c(3, OVERLAY_40_ID);
     iVar1 = data_ov041_02083020;

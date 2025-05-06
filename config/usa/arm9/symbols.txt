@@ -3556,11 +3556,16 @@ data_0206ad2c kind:bss addr:0x0206ad2c
 data_0206ad40 kind:bss addr:0x0206ad40
 data_0206ad7c kind:bss addr:0x0206ad7c
 data_0206adb8 kind:bss addr:0x0206adb8
+
+/////////////////////////////////////////////////////////////
+// src/OverlayManager.c
+/////////////////////////////////////////////////////////////
 data_0206af24 kind:bss addr:0x0206af24
 data_0206af28 kind:bss addr:0x0206af28
 data_0206b04c kind:bss addr:0x0206b04c
 data_0206b170 kind:bss addr:0x0206b170
 data_0206b294 kind:bss addr:0x0206b294
+
 data_0206b3b8 kind:bss addr:0x0206b3b8
 data_0206b3bc kind:bss addr:0x0206b3bc
 data_0206b3c0 kind:bss addr:0x0206b3c0

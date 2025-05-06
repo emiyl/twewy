@@ -1,3 +1,4 @@
+#include "OverlayManager.h"
 #include "common_data.h"
 #include "game.h"
 #include <registers.h>
@@ -1611,8 +1612,7 @@ void func_ov029_02082abc(void) {
 }
 
 s32 func_ov029_02082ae0(GameState* state) {
-    int in_r3;
-    s32 auStack_10[2];
+    OverlayTag tag;
 
     if ((data_02066a24.unk_02 & 8) != 0) {
         state->sndTest.unk_219E8 ^= 1;
@@ -1627,7 +1627,7 @@ s32 func_ov029_02082ae0(GameState* state) {
         func_020270e4();
         func_02026b20(3);
     } else if ((data_02066a24.unk_02 & 4) != 0) {
-        func_02007174(auStack_10);
+        func_02007174(&tag);
     } else if (data_02066a24.unk_04 == 0x40) {
         state->unk_219B0 = state->unk_219B0 + -1;
     } else if (data_02066a24.unk_04 == 0x80) {
@@ -1707,7 +1707,7 @@ s32 func_ov029_02082ae0(GameState* state) {
 
 // Nonmatching
 void func_ov029_02082e40(GameState* param) {
-    s32        sVar2;
+    GameState* sVar2;
     char*      name  = data_ov029_02083400;
     GameState* state = (GameState*)func_02004618(&data_0206a9b0, 0x219F0);
 
