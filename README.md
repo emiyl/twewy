@@ -1,5 +1,10 @@
 # The World Ends With You (Nintendo DS)
 
+[decompdev-url]:https://decomp.dev/Yotona/twewy
+[progress-badge]:https://decomp.dev/Yotona/twewy.svg?mode=shield&label=Matching
+
+[![Matching][progress-badge]][decompdev-url]
+
 This repository contains a reverse-engineered codebase for *The World Ends With You* (TWEWY) for the Nintendo DS. The goal of this project is to study and understand the game's code and mechanics. All code is produced by individual contributors without the use of assets or files produced by their original creators. **No assets are included. This repository CANNOT build a functional ROM without the user supplying a legitimately obtained copy of the game.** No "ports" or modifications are planned or supported in any form by this repository, and such use cases will **never** be supported or considered.
 
 ## Prerequisites
