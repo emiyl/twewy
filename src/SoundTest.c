@@ -1761,6 +1761,7 @@ void func_ov029_02082f9c(GameState* state) {
     funcs[idx](state);
 }
 
+/* Nonmatching */
 void func_ov029_02082fdc(void) {
     /* Not yet implemented */
 }

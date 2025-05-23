@@ -29,6 +29,7 @@ typedef struct {
 } UnkStruct_02066a24;
 extern UnkStruct_02066a24 data_02066a24;
 
+extern s32 data_02066aac[16];
 extern s16 data_02066aec;
 extern s32 data_02066cec;
 extern s16 data_02066eec;

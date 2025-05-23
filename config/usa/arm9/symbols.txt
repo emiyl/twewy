@@ -2936,8 +2936,8 @@ data_020636cc kind:data(any) addr:0x020636cc
 data_020636d0 kind:data(any) addr:0x020636d0
 data_020636e4 kind:data(any) addr:0x020636e4
 data_020636e8 kind:data(any) addr:0x020636e8
-data_02063728 kind:data(any) addr:0x02063728
-data_02063734 kind:data(any) addr:0x02063734
+@16 kind:data(any) addr:0x02063728 local
+@155 kind:data(any) addr:0x02063734 local
 data_02063744 kind:data(any) addr:0x02063744
 data_02063748 kind:data(any) addr:0x02063748
 data_02063750 kind:data(any) addr:0x02063750

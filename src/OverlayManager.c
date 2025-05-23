@@ -19,7 +19,7 @@ void func_02006f54(Overlay* overlay) {
     func_02006f78(overlay, -0x7fffffff, func_02006f50, NULL, 0);
 }
 
-// Nonmatching: Registers are not preserved correctly (scratch: 8OwUZ)
+/* Nonmatching: Registers are not preserved correctly (scratch: 8OwUZ) */
 void func_02006f78(Overlay* overlay, s32 overlayId, OverlayCB callback, GameState* state, s32 param_5) {
     OverlayData* currentData = &overlay->unk_14[overlay->unk_10];
 
@@ -34,6 +34,7 @@ void func_02006f78(Overlay* overlay, s32 overlayId, OverlayCB callback, GameStat
     overlay->unk_10++;
 }
 
+/* Nonmatching */
 void func_02006fc4(OverlayTag* tag, Overlay* overlay) {
     OverlayData* previousData;
     OverlayData* currentData;
@@ -56,6 +57,7 @@ void func_02006fc4(OverlayTag* tag, Overlay* overlay) {
     }
 }
 
+/* Nonmatching */
 void func_02007050(OverlayTag* tag, Overlay* overlay, s32 param_3, OverlayCB cb, GameState* state, s32 param_6) {
     OverlayTag local;
 
@@ -107,6 +109,7 @@ void func_0200713c(s32 overlayId, OverlayCB callback, GameState* state, int para
     func_02006f78(&data_0206b294, overlayId, callback, state, param_4);
 }
 
+/* Nonmatching */
 void func_02007174(OverlayTag* tag) {
     if (func_02007278() != 0x7FFFFFFF) {
         func_0200728c(0x7FFFFFFF);
@@ -125,6 +128,7 @@ void func_02007174(OverlayTag* tag) {
     tag->cb = currentData->tag.cb;
 }
 
+/* Nonmatching */
 void func_020071f4(OverlayTag* tag, s32 overlayId, void* callback, GameState* state, s32 param_5) {
     OverlayTag local;
 
@@ -134,6 +138,7 @@ void func_020071f4(OverlayTag* tag, s32 overlayId, void* callback, GameState* st
     tag->cb = local.cb;
 }
 
+/* Nonmatching */
 u32 func_02007240(void) {
     func_0200669c(1, &data_0206af24);
 }
@@ -154,6 +159,7 @@ void func_020072a4(void) {
     func_020070e8(&data_0206b294);
 }
 
+/* Nonmatching */
 void func_020072b8(void) {
     if (func_020066fc(data_0206b294.data->tag.id) == 1) {
         func_020070fc(&data_0206b294);

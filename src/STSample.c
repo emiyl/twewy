@@ -36,13 +36,14 @@ void func_ov041_02082730(GameState* state) {
     local_30.unk_1C = 0x20;
     local_30.unk_1E = 0x18;
     func_02025b68(&state->unk_21594, &local_30);
-    func_02010b18(&state->unk_215A0, 0, 0, "ï¿½ï¿½ï¿½ê‚¿ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½"); // "StreetPass Sample"
+    func_02010b18(&state->unk_215A0, 0, 0, "‚·‚ê‚¿‚ª‚¢ƒTƒ“ƒvƒ‹"); // "StreetPass Sample"
 }
 
 void func_ov041_020827b8(GameState* state) {
     func_02025e30(&state->unk_21594);
 }
 
+/* Nonmatching */
 void func_ov041_020827cc(GameState* state) {
     int iVar1;
     s8  abStack_5c[4];
@@ -79,6 +80,7 @@ void func_ov041_020828f0(GameState* state) {
     func_ov040_0209e028(&state->unk_219B0);
 }
 
+/* Nonmatching */
 void func_ov041_0208290c(GameState* state) {
     s32        idx;
     u8*        puVar2;
@@ -111,7 +113,7 @@ void func_ov041_0208290c(GameState* state) {
             }
             puVar2++;
         }
-        func_02010b18(&state->unk_215A0, 8, (state->unk_22088 + 1) * 8, "ï¿½fï¿½[ï¿½^ï¿½ï¿½M"); // "Data Received"
+        func_02010b18(&state->unk_215A0, 8, (state->unk_22088 + 1) * 8, "ƒf[ƒ^ŽóM"); // "Data Received"
         state->unk_22088++;
     }
 
@@ -124,6 +126,7 @@ void func_ov041_0208290c(GameState* state) {
     }
 }
 
+/* Nonmatching */
 void func_ov041_02082a5c(GameState* param) {
     int        iVar1;
     GameState* state;
@@ -182,10 +185,12 @@ void func_ov041_02082bc4(GameState* state) {
     funcs[idx](state);
 }
 
+/* Nonmatching */
 void func_ov041_02082c04(void) {
     /* Not yet implemented */
 }
 
+/* Nonmatching */
 void func_ov041_02082f1c(s32 param_1, s32 param_2, s32 param_3, s32 param_4) {
     if (-((data_02066a20 << 0x1f)) != 0) {
         func_ov040_0209e91c();
