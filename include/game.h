@@ -11,21 +11,23 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "BinMgr.h"
 #include <types.h>
 
 typedef struct {
-    /* 0x00000 */ char unk_00000[0x11580];
-    /* 0x11580 */ s32  unk_11580;
-    /* 0x11584 */ s32  unk_11584;
-    /* 0x11588 */ char unk_11588[0x1000C];
-    /* 0x21594 */ s32  unk_21594;
-    /* 0x21598 */ s32  unk_21598;
-    /* 0x2159C */ s32  unk_2159C;
-    /* 0x215A0 */ s32  unk_215A0;
-    /* 0x215A4 */ char unk_215A4[0x40C];
-    /* 0x219B0 */ s32  unk_219B0;
-    /* 0x219B4 */ s32  unk_219B4;
-    /* 0x219B8 */ s32  unk_219B8;
+    /* 0x00000 */ BinMgr binMgr;
+    /* 0x0004C */ char   unk_0004C[0x11534];
+    /* 0x11580 */ s32    unk_11580;
+    /* 0x11584 */ s32    unk_11584;
+    /* 0x11588 */ char   unk_11588[0x1000C];
+    /* 0x21594 */ s32    unk_21594;
+    /* 0x21598 */ s32    unk_21598;
+    /* 0x2159C */ s32    unk_2159C;
+    /* 0x215A0 */ s32    unk_215A0;
+    /* 0x215A4 */ char   unk_215A4[0x40C];
+    /* 0x219B0 */ s32    unk_219B0;
+    /* 0x219B4 */ s32    unk_219B4;
+    /* 0x219B8 */ s32    unk_219B8;
 
     struct SoundTest {
         /* 0x219BC */ s32  adxIdx;

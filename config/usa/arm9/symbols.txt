@@ -200,18 +200,24 @@ func_0200737c kind:function(arm,size=0x14) addr:0x0200737c
 func_02007390 kind:function(arm,size=0x14) addr:0x02007390
 func_020073a4 kind:function(arm,size=0x14) addr:0x020073a4
 func_020073b8 kind:function(arm,size=0x14) addr:0x020073b8
-func_020073cc kind:function(arm,size=0x18) addr:0x020073cc
-func_020073e4 kind:function(arm,size=0x20) addr:0x020073e4
-func_02007404 kind:function(arm,size=0x14) addr:0x02007404
-func_02007418 kind:function(arm,size=0x34) addr:0x02007418
-func_0200744c kind:function(arm,size=0xc0) addr:0x0200744c
-func_0200750c kind:function(arm,size=0x104) addr:0x0200750c
-func_02007610 kind:function(arm,size=0x150) addr:0x02007610
-func_02007760 kind:function(arm,size=0xc8) addr:0x02007760
-func_02007828 kind:function(arm,size=0xc8) addr:0x02007828
-func_020078f0 kind:function(arm,size=0xb4) addr:0x020078f0
-func_020079a4 kind:function(arm,size=0xac) addr:0x020079a4
-func_02007a50 kind:function(arm,size=0x4c) addr:0x02007a50
+
+/////////////////////////////////////////////////////////////
+// src/BinMgr.c
+/////////////////////////////////////////////////////////////
+BinMgr_AllocNode kind:function(arm,size=0x18) addr:0x020073cc
+BinMgr_AppendNode kind:function(arm,size=0x20) addr:0x020073e4
+BinMgr_AddToFreeList kind:function(arm,size=0x14) addr:0x02007404
+BinMgr_RemoveFromFreeList kind:function(arm,size=0x34) addr:0x02007418
+BinMgr_Init kind:function(arm,size=0xc0) addr:0x0200744c
+BinMgr_LoadRawData kind:function(arm,size=0x104) addr:0x0200750c
+BinMgr_LoadCompressed kind:function(arm,size=0x150) addr:0x02007610
+BinMgr_LoadUncompressed kind:function(arm,size=0xc8) addr:0x02007760
+BinMgr_LoadResource kind:function(arm,size=0xc8) addr:0x02007828
+BinMgr_CreateFromData kind:function(arm,size=0xb4) addr:0x020078f0
+BinMgr_ReleaseBin kind:function(arm,size=0xac) addr:0x020079a4
+BinMgr_FindById kind:function(arm,size=0x4c) addr:0x02007a50
+
+
 func_02007a9c kind:function(arm,size=0x18) addr:0x02007a9c
 func_02007ab4 kind:function(arm,size=0x20) addr:0x02007ab4
 func_02007ad4 kind:function(arm,size=0x14) addr:0x02007ad4
@@ -2946,8 +2952,14 @@ data_02063760 kind:data(any) addr:0x02063760
 data_02063764 kind:data(any) addr:0x02063764
 data_0206377c kind:data(any) addr:0x0206377c
 data_020637b8 kind:data(any) addr:0x020637b8
-data_020637c0 kind:data(any) addr:0x020637c0
-data_020637d0 kind:data(any) addr:0x020637d0
+
+/////////////////////////////////////////////////////////////
+// src/BinMgr.c
+/////////////////////////////////////////////////////////////
+@99 kind:data(any) addr:0x020637c0 local
+@194 kind:data(any) addr:0x020637d0 local
+
+
 data_020637e4 kind:data(any) addr:0x020637e4
 data_020637f4 kind:data(any) addr:0x020637f4
 data_02063808 kind:data(any) addr:0x02063808
@@ -3566,7 +3578,12 @@ data_0206b04c kind:bss addr:0x0206b04c
 data_0206b170 kind:bss addr:0x0206b170
 data_0206b294 kind:bss addr:0x0206b294
 
-data_0206b3b8 kind:bss addr:0x0206b3b8
+/////////////////////////////////////////////////////////////
+// src/BinMgr.c
+/////////////////////////////////////////////////////////////
+g_activeBinMgr kind:bss addr:0x0206b3b8
+
+
 data_0206b3bc kind:bss addr:0x0206b3bc
 data_0206b3c0 kind:bss addr:0x0206b3c0
 data_0206b3c4 kind:bss addr:0x0206b3c4
