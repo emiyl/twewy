@@ -19,3 +19,6 @@ build/
 build.ninja
 .ninja_*
 /wibo
+
+# macOS Artifacts
+.DS_Store

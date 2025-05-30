@@ -11,11 +11,13 @@ This repository contains a reverse-engineered codebase for *The World Ends With 
 
 1. This project supports the following operating systems:
     - Windows (Recommended)
+    - macOS
     - Linux
 2. Install the following:
     - Python 3.11+ and pip
     - GCC 9+
     - Ninja
+    - Wine (macOS only)
 3. Install Python dependencies: `python -m pip install -r tools/requirements.txt`
 
 ## Setup Instructions

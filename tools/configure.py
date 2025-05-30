@@ -13,17 +13,23 @@ VERSIONS = [
 ]
 DEFAULT_VERSION = VERSIONS.index("usa")
 
-DEFAULT_WIBO_PATH = "./wibo"
+# Platform info
+platform = get_platform()
+if platform is None:
+    exit(1)
 
+DEFAULT_WINE_PATH = "./wibo"
+if platform.system == "macos":
+    DEFAULT_WINE_PATH = "wine"
 
 parser = argparse.ArgumentParser(description="Generates build.ninja")
 parser.add_argument(
     "-w",
     type=str,
-    default=DEFAULT_WIBO_PATH,
+    default=DEFAULT_WINE_PATH,
     dest="wine",
     required=False,
-    help="Path to Wine/Wibo (linux only)",
+    help="Path to Wine/Wibo (macOS/Linux only)",
 )
 parser.add_argument(
     "--compiler",
@@ -48,7 +54,7 @@ args = parser.parse_args()
 # Config
 GAME = "twewy"
 
-DSD_VERSION = "v0.8.0"
+DSD_VERSION = "0.8.0" 
 WIBO_VERSION = "0.6.16"
 OBJDIFF_VERSION = "v2.7.1"
 MWCC_VERSION = "2.0/sp1p5"
@@ -119,11 +125,6 @@ for root, dirs, _ in os.walk(libs_path):
             includes.append(Path(root) / dir)
 CC_INCLUDES = " ".join(f"-i {include}" for include in includes)
 
-
-# Platform info
-platform = get_platform()
-if platform is None:
-    exit(1)
 
 EXE = platform.exe
 WINE = args.wine if platform.system != "windows" else ""
@@ -352,7 +353,7 @@ def add_download_tool_builds(n: ninja_syntax.Writer):
         )
         n.newline()
 
-    if platform.system != "windows" and WINE == DEFAULT_WIBO_PATH:
+    if platform.system == "linux" and WINE == DEFAULT_WINE_PATH:
         n.build(
             rule="download_tool",
             outputs=WINE,
@@ -363,7 +364,6 @@ def add_download_tool_builds(n: ninja_syntax.Writer):
             },
         )
         n.newline()
-
 
 def add_extract_build(n: ninja_syntax.Writer, project: Project):
     if not args.no_extract:

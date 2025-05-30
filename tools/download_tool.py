@@ -21,8 +21,12 @@ parser.add_argument("--path", type=Path, required=True)
 args = parser.parse_args()
 
 
+# Change back to AetiasHax/ds-decomp once repo is updated to latest ds-decomp and macOS supported has been added
+# REPO_URL = "https://github.com/AetiasHax/ds-decomp"
+REPO_URL = "https://github.com/emiyl/ds-decomp"
+
 def dsd_url(tag: str) -> str:
-    return f"https://github.com/AetiasHax/ds-decomp/releases/download/{tag}/dsd-{platform.system}-{platform.machine}{platform.exe}"
+    return f"{REPO_URL}/releases/download/{tag}/dsd-{platform.system}-{platform.machine}{platform.exe}"
 
 
 def mwccarm_url(tag: str) -> str:
