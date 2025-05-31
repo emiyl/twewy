@@ -38,4 +38,16 @@ def get_platform() -> Platform | None:
             print(f"Unknown machine: {machine}")
             return None
 
+    supported_platforms = [
+        "windows-x86_64",
+        "linux-x86_64",
+        "macos-x86_64",
+        "macos-arm64"
+    ]
+
+    combined = f"{system}-{machine}"
+    if combined not in supported_platforms:
+        print(f"Unsupported platform: {combined}")
+        return None
+
     return Platform(system=system, machine=machine, exe=exe)
