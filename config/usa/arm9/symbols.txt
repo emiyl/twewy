@@ -2078,7 +2078,7 @@ func_0203973c kind:function(arm,size=0x24) addr:0x0203973c
 func_02039760 kind:function(arm,size=0x24) addr:0x02039760
 
 /////////////////////////////////////////////////////////////
-// src/datacache.c
+// src/cache.c
 /////////////////////////////////////////////////////////////
 DC_Enable kind:function(arm,size=0x18) addr:0x02039784
 DC_InvalidateAll kind:function(arm,size=0xc) addr:0x0203979c
@@ -2092,14 +2092,18 @@ IC_Enable kind:function(arm,size=0x18) addr:0x02039870
 IC_InvalidateAll kind:function(arm,size=0xc) addr:0x02039888
 IC_InvalidateRange kind:function(arm,size=0x1c) addr:0x02039894
 
+/////////////////////////////////////////////////////////////
+// src/new.c
+/////////////////////////////////////////////////////////////
 
-func_020398b0 kind:function(arm,size=0x20) addr:0x020398b0
+wait_for_vblank_start kind:function(arm,size=0x20) addr:0x020398b0
 func_020398d0 kind:function(arm,size=0x48) addr:0x020398d0
 func_02039918 kind:function(arm,size=0x104) addr:0x02039918
 func_02039a1c kind:function(arm,size=0x6c) addr:0x02039a1c
 func_02039a88 kind:function(arm,size=0x14) addr:0x02039a88
 func_02039a9c kind:function(arm,size=0x14) addr:0x02039a9c
 func_02039ab0 kind:function(arm,size=0xe4) addr:0x02039ab0
+
 func_02039b94 kind:function(arm,size=0xa8) addr:0x02039b94
 func_02039c3c kind:function(arm,size=0x14) addr:0x02039c3c
 func_02039c50 kind:function(arm,size=0x14) addr:0x02039c50
