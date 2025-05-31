@@ -16,7 +16,13 @@ LZ77UnCompReadByCallbackWrite16bit kind:function(thumb,size=0x4) addr:0x02000638
 Mod kind:function(thumb,size=0x6) addr:0x020006b6
 BitUnPack kind:function(thumb,size=0x4) addr:0x0200072c
 GetCRC16 kind:function(thumb,size=0x4) addr:0x0200079e
+
+/////////////////////////////////////////////////////////////
+// src/Entry.c
+/////////////////////////////////////////////////////////////
 Entry kind:function(arm,size=0x154) addr:0x02000800
+
+
 func_02000954 kind:function(arm,size=0x1c) addr:0x02000954
 func_02000970 kind:function(arm,size=0xac) addr:0x02000970
 func_02000a1c kind:function(arm,size=0x90) addr:0x02000a1c
