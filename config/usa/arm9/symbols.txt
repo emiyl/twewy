@@ -1292,7 +1292,10 @@ func_02023480 kind:function(arm,size=0xbc) addr:0x02023480
 func_0202353c kind:function(arm,size=0x4c) addr:0x0202353c
 func_02023588 kind:function(arm,size=0x10) addr:0x02023588
 func_02023598 kind:function(arm,size=0x10) addr:0x02023598
-func_020235a8 kind:function(arm,size=0x24) addr:0x020235a8
+
+// src/unsorted/increment_main_loop_tick.c
+increment_main_loop_tick kind:function(arm,size=0x24) addr:0x020235a8
+
 func_020235cc kind:function(arm,size=0x30) addr:0x020235cc
 func_020235fc kind:function(arm,size=0x34) addr:0x020235fc
 func_02023630 kind:function(arm,size=0x3c) addr:0x02023630
@@ -2092,16 +2095,19 @@ IC_Enable kind:function(arm,size=0x18) addr:0x02039870
 IC_InvalidateAll kind:function(arm,size=0xc) addr:0x02039888
 IC_InvalidateRange kind:function(arm,size=0x1c) addr:0x02039894
 
-/////////////////////////////////////////////////////////////
-// src/020398b0->02039a9c.c
-/////////////////////////////////////////////////////////////
-
+// unsorted/incomplete/wait_for_vblank_start.c
 wait_for_vblank_start kind:function(arm,size=0x20) addr:0x020398b0
+
+// unsorted/complete/func_020398d0.c
 func_020398d0 kind:function(arm,size=0x48) addr:0x020398d0
+
+// unsorted/complete/func_02039918.c
 func_02039918 kind:function(arm,size=0x104) addr:0x02039918
 func_02039a1c kind:function(arm,size=0x6c) addr:0x02039a1c
-func_02039a88 kind:function(arm,size=0x14) addr:0x02039a88
-func_02039a9c kind:function(arm,size=0x14) addr:0x02039a9c
+
+// unsorted/complete/TableAccess.c
+read_int_from_table1 kind:function(arm,size=0x14) addr:0x02039a88
+read_int_from_table2 kind:function(arm,size=0x14) addr:0x02039a9c
 
 func_02039ab0 kind:function(arm,size=0xe4) addr:0x02039ab0
 func_02039b94 kind:function(arm,size=0xa8) addr:0x02039b94

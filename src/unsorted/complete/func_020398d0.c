@@ -1,0 +1,19 @@
+void func_020398d0(void) {
+    func_02039918();
+    func_0203cc10();
+    func_02038664();
+    func_02039a1c();
+    func_020383bc();
+    func_02038630();
+    func_0203a114();
+    func_0203babc();
+    func_0203a5e4();
+    func_0203aa14();
+    func_02038cb4();
+    func_0203a7fc();
+    func_0204799c();
+    func_02043134();
+    func_02040ac0();
+    wait_for_vblank_start();
+    return;
+}
