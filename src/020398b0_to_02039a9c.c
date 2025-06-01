@@ -1,27 +1,29 @@
-#include "new.h"
+#include "020398b0_to_02039a9c.h"
 
-extern void* data_0207df5c;
-extern s32 data_0207df60;
+s32 *data_0207df5c;
 
-#define DISPCNT_A_ADDR  0x04000000U
+#define REG16(addr) *(vu16 *)(addr)
+#define REG32(addr) *(vu32 *)(addr)
+
+#define DISPCNT_A_ADDR  0x4000000U
 #define IME_A7_OFFSET   0x208U
 #define VCOUNT_OFFSET   0x6U
 
-#define DISPCNT_A (*(volatile u32 *)(DISPCNT_A_ADDR))
-#define IME_A7 (*(volatile u32 *)(DISPCNT_A_ADDR + IME_A7_OFFSET))
-#define VCOUNT (*(volatile u16 *)(DISPCNT_A_ADDR + VCOUNT_OFFSET))
+#define DISPCNT_A REG32(DISPCNT_A_ADDR)
+#define IME_A7 REG32(DISPCNT_A_ADDR + IME_A7_OFFSET)
+#define VCOUNT REG16((u8 *)DISPCNT_A_ADDR + VCOUNT_OFFSET)
 
-u32 wait_for_vblank_start(void) {
-    s32 savedIME = IME_A7;
-    IME_A7 = &DISPCNT_A;
-    u32 vcount = VCOUNT;
+void wait_for_vblank_start() {
+    u32 *dispcnt = DISPCNT_A_ADDR;
+    u32 *ime_a7 = dispcnt + (IME_A7_OFFSET / sizeof(u32));
+    volatile u16 *vcount = (u8 *)dispcnt + VCOUNT_OFFSET;
     
-    do {
-        vcount = (u32)VCOUNT;
-    } while (vcount);
+    u32 saved_ime = *ime_a7;
+    *ime_a7 = DISPCNT_A_ADDR;
 
-    IME_A7 = savedIME;
-    return vcount;
+    while (*vcount);
+
+    *ime_a7 = saved_ime;
 }
 
 void func_020398d0(void) {
@@ -45,8 +47,10 @@ void func_020398d0(void) {
 }
 
 void* func_02039918(void) {
-    if (data_0207df5c != NULL)
-        return data_0207df5c;
+    u32 result = data_0207df5c;
+
+    if (result != 0)
+        return result;
 
     data_0207df5c = 1;
     func_02039c3c(0, func_02039ab0(0));
@@ -68,13 +72,16 @@ s32 func_02039a1c() {
     u32 uVar1;
     u16 uVar2;
 
-    uVar1 = func_2039ab0(2);
+    uVar1 = func_02039ab0(2);
     func_02039c3c(2, uVar1);
 
-    uVar1 = func_2039b94(2);
+    uVar1 = func_02039b94(2);
     func_02039c50(2, uVar1);
     
-    if ((data_0207df60 != 0) && (uVar2 = func_02039380(), (uVar2 & 3) != 1)) {
+    if (
+        (&data_0207df5c[1] != 0) &&
+        (uVar2 = func_02039380(), (uVar2 & 3) != 1)
+    ) {
         func_02039380();
     }
 
@@ -91,31 +98,4 @@ s32 func_02039a88(int index) {
 
 s32 func_02039a9c(int index) {
     return *((s32 *)((index << 2) + 0x27ffda0));
-}
-
-s32 func_02039ab0(s32 param_1) {
-    u16 uVar1;
-    
-    switch(param_1) {
-        case 0:
-            return 0x23e0000;
-        case 1:
-            return 0;
-        case 2:
-            if ((data_0207df60 != 0) && (uVar1 = func_02039380(), (uVar1 & 3) != 1)) {
-                return 0x2700000;
-            }
-            break;
-        case 3:
-            return 0x2000000;
-        case 4:
-            return 0x27e0780;
-        case 5:
-            return 0x27ff680;
-        case 6:
-            return 0x37f8000;
-        default:
-            return 0;
-    }
-    return 0;
 }

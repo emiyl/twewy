@@ -58,5 +58,5 @@ src/cache.c:
 complete
     .text       start:0x02039784 end:0x020398B0
 
-src/new.c:
-    .text       start:0x020398b0 end:0x02039b94
+src/020398b0_to_02039a9c.c:
+    .text       start:0x020398b0 end:0x02039ab0
