@@ -60,6 +60,3 @@ src/main_21.c:
 src/cache.c:
 complete
     .text       start:0x02039784 end:0x020398B0
-
-src/main_16.c:
-    .text       start:0x020398b0 end:0x02039b94
