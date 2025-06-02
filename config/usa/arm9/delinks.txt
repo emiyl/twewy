@@ -54,24 +54,12 @@ libs/CriWare/src/acsvhl.c:
     .text       start:0x02021184 end:0x02021534
     .data       start:0x020658EC end:0x020659BC  
 
-src/unsorted/incomplete/increment_main_loop_tick.c:
+src/main_21.c:
     .text       start:0x020235a8 end:0x020235cc
 
 src/cache.c:
 complete
     .text       start:0x02039784 end:0x020398B0
 
-src/unsorted/incomplete/wait_for_vblank_start.c:
-    .text       start:0x020398b0 end:0x020398d0
-
-src/unsorted/complete/func_020398d0.c:
-complete
-    .text       start:0x020398d0 end:0x02039918
-
-src/unsorted/complete/func_02039918.c:
-complete
-    .text       start:0x02039918 end:0x02039a88
-
-src/unsorted/complete/TableAccess.c:
-complete
-    .text       start:0x02039a88 end:0x02039ab0
+src/main_16.c:
+    .text       start:0x020398b0 end:0x02039b94
